@@ -1,7 +1,12 @@
 "use client"
 import { useEffect, useRef } from "react";
 
-const VideoSample = () => {
+interface VideoSampleProps {
+  src: string;
+  loop: boolean;
+}
+
+const VideoSample = ({src,loop}:VideoSampleProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -14,11 +19,11 @@ const VideoSample = () => {
 <>
 <video
         ref={videoRef}
-        src="https://d1utppovu0gppp.cloudfront.net/input/op.mp4"
+        src={src}
         muted
         style={{ height: "100%", width: "100%" }}
         autoPlay
-        loop
+        loop={loop}
         playsInline
       />
 </>
