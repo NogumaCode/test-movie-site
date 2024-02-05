@@ -96,21 +96,6 @@ const videoInfo: Record<string, VideoInfoProps> = {
     loop: false,
 
   },
-  // op: { pcSrc: "/videos/op.mp4", spSrc: "/videos/op_sp.mp4", loop: false, },
-  // loop1: { pcSrc: "/videos/loop1.mp4", spSrc: "/videos/loop1_sp.mp4",  loop: true, },
-  // move1: { pcSrc: "/videos/move1_2.mp4", spSrc: "/videos/move1_2_sp.mp4", loop: false, },
-  // back1: { pcSrc: "/videos/back1_2.mp4", spSrc: "/videos/back1_2_sp.mp4", loop: false, },
-  // loop2: { pcSrc: "/videos/loop2.mp4", spSrc: "/videos/loop2_sp.mp4", loop: true, },
-  // move2: { pcSrc: "/videos/move2_3.mp4", spSrc: "/videos/move2_3_sp.mp4", loop: false, },
-  // back2: { pcSrc: "/videos/back2_3.mp4", spSrc: "/videos/back2_3_sp.mp4", loop: false, },
-  // loop3: { pcSrc: "/videos/loop3.mp4", spSrc: "/videos/loop3_sp.mp4", loop: true, },
-  // move3: { pcSrc: "/videos/move3_4.mp4",spSrc: "/videos/move3_4_sp.mp4", loop: false, },
-  // back3: { pcSrc: "/videos/back3_4.mp4", spSrc: "/videos/back3_4_sp.mp4", loop: false, },
-  // loop4: { pcSrc: "/videos/loop4.mp4", spSrc: "/videos/loop4_sp.mp4", loop: true, },
-  // move4: { pcSrc: "/videos/move4_5.mp4",spSrc: "/videos/move4_5_sp.mp4", loop: false, },
-  // back4: { pcSrc: "/videos/back4_5.mp4", spSrc: "/videos/back4_5_sp.mp4", loop: false, },
-  // loop5: { pcSrc: "/videos/loop5.mp4", spSrc: "/videos/loop5_sp.mp4", loop: true, },
-  // move5: { pcSrc: "/videos/move1_5.mp4", spSrc: "/videos/move1_5_sp.mp4", loop: false, },
 };
 
 type VideoName = keyof typeof videoInfo;
@@ -125,6 +110,8 @@ const linkList: Partial<
 };
 
 export default function Home() {
+
+
   return (
     <div>
       <VideoSample src={videoInfo.op.pcSrc} loop={videoInfo.op.loop} />
